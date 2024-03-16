@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradeep Aroulmoji</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/930ca7e2ff.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Pradeep</span></h1>
+                <h2>Software Engineer</h2>
+                <p>Graduated from the University of Trieste, Pradeep Aroulmoji <br> is a software engineer whose passion lies in developing <br>software related to artificial intelligence</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-----------------about------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br><p>Python, Java, C, SQL, HTML5, CSS</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-2024</span><br><p>Design and implementation of a machine learning-based audio surveillance software project<br>INSIEL S.P.A.<br>Trieste, Italy</p></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2023</span><br><p>Bachelor in science: Computer & Electronic Engeneering<br>Università degli Studi di Trieste<br>Trieste, Italy</p></li>
+                        </ul>
+                        <ul>
+                            <li><span>2013-2018</span><br><p>Liceo Scienfico Statale Galileo Galilei<br>Trieste, Italy</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!------------------portfolio---------->
+    <div id="portfolio">
+        <div class="container3">
+            <h1 class="sub-title2">Portfolio</h1>
+            <p>Here are some projects that I have developed recently.</p>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Scream Detection for Forensics</h3>
+                        <p>
+                            This prototype, developed in collaboration with INSIEL, is intended for surveillance applications in urban contexts within the forensic domain.</p>
+                        <a href="https://github.com/pradeeparoulmoji/audio-security"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music Label Structure Database</h3>
+                        <p>A Database Design that can help emerging music labels outline their business.</p>
+                        <a href="https://github.com/pradeeparoulmoji/Database-for-Music-Labels"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>High and Low Frequency Volume Control</h3>
+                        <p>An electronic Circuit capable of controlling the volume of high and low frequencies of a signal</p>
+                        <a href="https://github.com/pradeeparoulmoji/Low-and-High-Frequency-Volume-Control-Circuit"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-4.png">
+                    <div class="layer">
+                        <h3>Housing Price Predictor</h3>
+                        <p>A simple machine learning model that can predict housing prices. <br><br>Coming Soon</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!------------------contact---------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                <h1 class= "sub-title">Contact Me</h1>
+                <p>e-mail: pradaroulmoji@gmail.com</p>
+                <p>phone: +393460853467</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/pradeep-aroulmoji-211589238/"><i class="fa-brands fa-linkedin"></i></a>
+                    
+            </div>
+            <a href="images/my-cv.pdf"  download class="btn btn2">Download CV</a>
+        
+    
+        
+            <div class="copyright">
+                <p>© 2024 Pradeep Aroulmoji All Rights Reserved</p>
+            </div>
+            </div>  
+        </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    <script> src ="https://smtpjs.com/v3/smtp.js"</script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+</script>
+
+        
+    
+</body>
